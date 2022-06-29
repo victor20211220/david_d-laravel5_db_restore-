@@ -20,6 +20,7 @@ class HomeController extends Controller
     public function __construct()
     {
 		/*
+		 *  // add user
 		$user = User::create(['name'=>'admin', 'email' => 'admin@gmail.com', 'password' => bcrypt("a")]);
 		dd($user);
 		*/

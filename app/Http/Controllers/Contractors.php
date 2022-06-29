@@ -72,7 +72,6 @@ class Contractors extends Controller
 
             // Validate
             $validator = Validator::make(Input::all(), $rules);
-
             if ($validator->fails()) {
                 // If the validation fails then deal with it.
                 Session::flash('alert-danger', 'An Error Occured.');

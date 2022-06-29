@@ -29,7 +29,8 @@
                         <div class="controls">
                             <div class="form">
                                 <div class="entry input-group">
-                                    {{ Form::email('contractor_email[]', Input::old('email'), array('class' => 'form-control')) }}
+                                    {{--{{ Form::email('contractor_email[]', Input::old('email'), array('class' => 'form-control')) }}--}}
+                                    {{ Form::email('contractor_email', Input::old('email'), array('class' => 'form-control')) }}
                                     <span class="input-group-btn">
                                 <button class="btn btn-success btn-add btn-flat" type="button">+</button>
                             </span>
@@ -42,7 +43,8 @@
                         <div class="controls-phone">
                             <div class="form-phone">
                                 <div class="entry-phone input-group">
-                                    {{ Form::tel('contractor_phone[]', Input::old('phones'), array('class' => 'form-control')) }}
+                                    {{--{{ Form::tel('contractor_phone[]', Input::old('phones'), array('class' => 'form-control')) }}--}}
+                                    {{ Form::tel('contractor_phone', Input::old('phones'), array('class' => 'form-control')) }}
                                     <span class="input-group-btn">
                                 <button class="btn btn-success btn-add-phone btn-flat" type="button">+</button>
                             </span>

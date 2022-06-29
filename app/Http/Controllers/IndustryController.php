@@ -119,7 +119,7 @@ class IndustryController extends Controller
     public function GetIndustriesJSON() {
         if (Auth::check()) {
             $category = DB::select('select category.id, industries.industry, category.industry_id, category.category from category INNER JOIN industries ON category.industry_id=industries.id');
-
+			$industries = [];
             foreach ($category as $row) {
                 $industry_name = $row->industry;
                 $industries[$industry_name][] = $row->category;
