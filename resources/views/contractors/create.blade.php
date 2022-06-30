@@ -25,12 +25,12 @@
                         {{ Form::text('contractor_name', Input::old('contractor_name'), array('class' => 'form-control')) }}
                     </div>
                     <div class="form-group">
-                        {{ Form::label('contractor_email', 'Contractor Email(s)') }}
+                        {{ Form::label('contractor_email[]', 'Contractor Email(s)') }}
                         <div class="controls">
                             <div class="form">
                                 <div class="entry input-group">
                                     {{--{{ Form::email('contractor_email[]', Input::old('email'), array('class' => 'form-control')) }}--}}
-                                    {{ Form::email('contractor_email', Input::old('email'), array('class' => 'form-control')) }}
+                                    {{ Form::email('contractor_email[]', Input::old('email'), array('class' => 'form-control')) }}
                                     <span class="input-group-btn">
                                 <button class="btn btn-success btn-add btn-flat" type="button">+</button>
                             </span>
@@ -44,7 +44,7 @@
                             <div class="form-phone">
                                 <div class="entry-phone input-group">
                                     {{--{{ Form::tel('contractor_phone[]', Input::old('phones'), array('class' => 'form-control')) }}--}}
-                                    {{ Form::tel('contractor_phone', Input::old('phones'), array('class' => 'form-control')) }}
+                                    {{ Form::tel('contractor_phone[]', Input::old('phones'), array('class' => 'form-control')) }}
                                     <span class="input-group-btn">
                                 <button class="btn btn-success btn-add-phone btn-flat" type="button">+</button>
                             </span>
@@ -69,6 +69,7 @@
                             <div class="col-xs-3">
                                 <p>City:</p>
                                 <select name="city" class="form-control city" disabled="true">
+                                    <option></option>
                                 </select>
                             </div>
                             <div class="col-xs-3">
@@ -137,7 +138,6 @@
         var jsonData = "{{$areasJSON}}";
         var text = jsonData.replace(/&quot;/g, '"');
         var result = JSON.parse(text);
-
         // Industries
         var jsonIndustry = "{{$industry}}";
         var textIndustry = jsonIndustry.replace(/&quot;/g, '"');
