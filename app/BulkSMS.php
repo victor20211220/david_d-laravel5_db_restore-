@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class BulkSMS extends Model
 {
     //
-    protected $table = "BulkSMS";
+    protected $table = "bulksms";
 }
